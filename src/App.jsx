@@ -1,5 +1,4 @@
-const DASHBOARD_URL =
-  "https://ca-shs-clair-monitor-web-dev.gentledune-55d9f3c4.westeurope.azurecontainerapps.io/login";
+const DASHBOARD_URL = "/monitor-login";
 
 const modules = [
   {

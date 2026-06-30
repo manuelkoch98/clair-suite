@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/monitor-login",
+      "destination": "https://ca-shs-clair-monitor-web-dev.gentledune-55d9f3c4.westeurope.azurecontainerapps.io/login"
+    }
+  ]
+}

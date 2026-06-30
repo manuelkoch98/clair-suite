@@ -1,4 +1,4 @@
-const CACHE_NAME = "clair-suite-v1";
+const CACHE_NAME = "clair-suite-v2";
 const APP_SHELL = [
   "/",
   "/index.html",
@@ -33,6 +33,12 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") {
+    return;
+  }
+
+  const requestUrl = new URL(event.request.url);
+  if (requestUrl.pathname.startsWith("/monitor-login")) {
+    event.respondWith(fetch(event.request));
     return;
   }
 
